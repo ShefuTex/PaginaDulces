@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./catalogos.component.css']
 })
 export class CatalogosComponent implements OnInit {
-
+  hero = 'datos';
   constructor() { }
 
   ngOnInit() {
