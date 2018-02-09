@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { AlertModule } from 'ngx-bootstrap/alert';
+import { AccordionModule } from 'ngx-bootstrap/accordion';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 
 import { AppComponent } from './app.component';
@@ -12,10 +14,13 @@ import { CatalogosComponent } from './catalogos/catalogos.component';
   declarations: [
     AppComponent,
     RecervacionesComponent,
-    CatalogosComponent
+    CatalogosComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AlertModule.forRoot(),
+    AccordionModule.forRoot(),
+    CarouselModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
