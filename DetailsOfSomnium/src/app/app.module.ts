@@ -4,8 +4,7 @@ import { AlertModule } from 'ngx-bootstrap/alert';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {NoopAnimationsModule} from '@angular/platform-browser/animations';
-
+import {NoopAnimationsModule} from '@angular/platform-browser/animations
 
 import { AppComponent } from './app.component';
 import { RecervacionesComponent } from './recervaciones/recervaciones.component';
@@ -13,6 +12,7 @@ import { CatalogosComponent } from './catalogos/catalogos.component';
 import { CatalogoComponent } from './catalogos/templateCatalogo/catalogo.component';
 import { AppRoutesModule } from './app-routes.modules';
 import { NavBarComponent } from './ui/navbar.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
 
 import {
   MatAutocompleteModule,
@@ -99,7 +99,8 @@ export class DemoMaterialModule {}
     RecervacionesComponent,
     CatalogosComponent,
     CatalogoComponent,
-    NavBarComponent
+    NavBarComponent,
+    ToolbarComponent
   ],
   imports: [
     BrowserModule,
@@ -117,8 +118,8 @@ export class DemoMaterialModule {}
   ],
   providers: [],
 
-  entryComponents: [NavBarComponent],
-  bootstrap: [AppComponent, NavBarComponent]
+  entryComponents: [NavBarComponent,ToolbarComponent],
+  bootstrap: [AppComponent, NavBarComponent, ToolbarComponent]
 })
 export class AppModule {}
 

@@ -1,6 +1,9 @@
+
 <mat-sidenav-container
     class="example-container" (backdropClick)="close('backdrop')" *ngIf="shouldRun">
+
   <mat-sidenav #sidenav (keydown.escape)="close('escape')" disableClose>
+
     <div>
       <p><button mat-button (click)="close('toggle button')">Toggle</button></p>
     </div>
@@ -36,6 +39,7 @@
   </mat-sidenav>
 
   <mat-sidenav-content>
+    <app-toolbar>loading</app-toolbar>
     <p><button mat-button (click)="sidenav.open()">Open</button></p>
     <p>Closed due to: {{reason}}</p>
   </mat-sidenav-content>
