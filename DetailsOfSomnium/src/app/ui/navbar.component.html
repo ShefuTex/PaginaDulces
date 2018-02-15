@@ -1,0 +1,44 @@
+<mat-sidenav-container
+    class="example-container" (backdropClick)="close('backdrop')" *ngIf="shouldRun">
+  <mat-sidenav #sidenav (keydown.escape)="close('escape')" disableClose>
+    <div>
+      <p><button mat-button (click)="close('toggle button')">Toggle</button></p>
+    </div>
+
+    <div class="content">
+  		<div class="col-xs-0 col-sm-1 col-md-1"></div>
+  		<div class="col-xs-12 col-sm-10 col-md-10">
+  			<accordion>
+  				<accordion-group heading="Catalogos De Temporada">
+  					<app-catalogos></app-catalogos>
+  				</accordion-group>
+  				<accordion-group #group>
+  					<div accordion-heading class="clearfix">
+  						Recervaciones
+  					</div>
+  					<app-recervaciones></app-recervaciones>
+  				</accordion-group>
+  				<accordion-group (isOpenChange)="log($event)">
+  					<div accordion-heading class="clearfix">
+  						Productos mas Vendidos
+  					</div>
+  					<p>Some content</p>
+  				</accordion-group>
+  				<accordion-group >
+  					<div accordion-heading class="clearfix">
+  						Informacion de contacto
+  					</div>
+  					<p>Some content</p>
+  				</accordion-group>
+  			</accordion>
+  		</div>
+  	</div>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <p><button mat-button (click)="sidenav.open()">Open</button></p>
+    <p>Closed due to: {{reason}}</p>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<div *ngIf="!shouldRun">Please open on Stackblitz to see result</div>
